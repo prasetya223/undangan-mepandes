@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://fonts.googleapis.com/css2?family=Quintessential&family=Rouge+Script' rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Undangan Mepandes</title>
+</head>
+<body>
+  <section class="hero">
+    <div class="f f-atas"></div>
+    <div class="title">
+      <img src="img/div-atas.png" alt="frame">
+      <h1>
+        Undangan Mepandes
+      </h1>
+      <img src="img/div-bawah.png" alt="frame">
+    </div>
+    <div class="f f-bawah"></div>
+  </section>
+  <section class="isi">
+    <div class="info">
+      <h1>
+        Om Swastyastu
+      </h1>
+      <p>Atas Asung Kertha Wara Nugraha Ida Sang Hyang Widi Wasa/Tuhan Yang Maha Esa,
+        Kami akan menyelenggarakan Upacara Manusa Yadnya Mepandes (Potong Gigi) Putra - Putri kami:
+      </p>
+      <ul class="nama">
+        <li>I Gusti Ngurah Aditya Dananputra Wijaya</li>
+        <li>I Gusti Ngurah Bagus Prasetya Wijaya</li>
+        <li>Sagung Istri Regita Paramanandi Wijaya</li>
+        <li>Sagung Putri Narita Parameswari Wijaya</li>
+      </ul>
+      <div>
+        <p class='pasangan'>Putra - Putri dari pasangan</p>
+        <p class='ortu'>I Gusti Ngurah Putu Sanjaya
+          <br>&
+          <br>Gusti Ayu Ketut Dewi Latrini
+        </p>
+      </div>
+    </div>
+    <div class="detail">
+      <img src="img/div2-atas.png" alt="frame">
+      <div class="pada">
+        <h1>
+          Detail Acara
+        </h1>
+        <p>
+          Hari dan Tanggal:
+          <br>Jumat, 4 Desember 2020
+        </p>
+        <p>
+          Waktu
+          <br>13.00 WITA - Selesai
+        </p>
+        <p>
+          Tempat
+          <br>Jalan Gunung Agung No.17, Banjar Lebah, Tabanan
+        </p>
+        <a href="https://goo.gl/maps/aEB6csVVPw7Ndgg16">
+          BUKA MAPS
+        </a>
+      </div>
+      <img src="img/div2-bawah.png" alt="frame">
+    </div>
+    <div>
+      <p>
+        Akan merupakan suatu kehormatan dan kebahagiaan
+        bagi kami apabila Bapak/ Ibu / Saudara, berkenan hadir
+        untuk memberikan doa restu. Atas kehadiran doa restunya
+        kami sekeluarga mengucapkan banyak terima kasih
+      </p>
+    </div>
+    <div class="santih">
+      <h1 class="santih-h1">Om Santih Santih Santih Om</h1>
+    </div>
+    <div class="countdown">
+      <h1>Countdown</h1>
+      <div>
+        <div>
+          <h2>Hari</h2>
+          <p id="hari" class="hari"></p>
+        </div>
+        <div>
+          <h2>Jam</h2>
+          <p id="jam" class="jam"></p>
+        </div>
+        <div>
+          <h2>Menit</h2>
+          <p id="menit" class="menit"></p>
+        </div>
+        <div>
+          <h2>Detik</h2>
+          <p id="detik" class="detik"></p>
+        </div>
+      </div>
+    </div>
+    <script>
+      // Set the date we're counting down to
+      var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
+      // Update the count down every 1 second
+      var x = setInterval(function() {
+        // Get today's date and time
+        var now = new Date().getTime();
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        // Output the result in an element with id="demo"
+        document.getElementById("hari").innerHTML = days;
+        document.getElementById("jam").innerHTML = hours;
+        document.getElementById("menit").innerHTML = minutes;
+        document.getElementById("detik").innerHTML = seconds;
+        // If the count down is over, write some text 
+        if (distance < 0) {
+          clearInterval(x);
+          document.getElementById("countdown").innerHTML = "EXPIRED";
+        }
+      }, 1000);
+    </script>
+  </section>
+</body>
+</html>
